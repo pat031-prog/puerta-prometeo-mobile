@@ -3,7 +3,20 @@ const STORAGE_KEY = "puerta-prometeo-state-v2";
 const sceneImages = {
   puerta: "/assets/scenes/puerta-prometeo.webp",
   archivo: "/assets/scenes/archivo-echeverria.webp",
-  cthon: "/assets/scenes/cthonfuego-datacenter.webp"
+  cthon: "/assets/scenes/cthonfuego-datacenter.webp",
+  zona0: "/assets/scenes/zona0-comunicado.webp",
+  puerto: "/assets/scenes/puerto-ritual.webp",
+  hospital: "/assets/scenes/hospital-rutina.webp",
+  bolsa: "/assets/scenes/bolsa-oraculo.webp",
+  fork: "/assets/scenes/fork-maquina.webp",
+  subsuelo: "/assets/scenes/subsuelo-cthonfuego.webp",
+  catedral: "/assets/scenes/catedral-derrame.webp",
+  frontera: "/assets/scenes/frontera-yuyo.webp",
+  yuyo: "/assets/scenes/frontera-yuyo.webp",
+  aleph: "/assets/scenes/archivo-aleph.webp",
+  apertura: "/assets/scenes/apertura-final.webp",
+  piedra: "/assets/scenes/piedra-host.webp",
+  nota: "/assets/scenes/nota-al-pie.webp"
 };
 
 const acts = [
@@ -95,7 +108,7 @@ const districts = [
 
 const scenes = {
   start: {
-    image: "puerta",
+    image: "zona0",
     place: "00:09 / Pantalla bloqueada",
     title: "El paquete se ejecuta",
     caption: "Un icono rojo aparece en todos los telefonos. No tiene app, no tiene permisos, no tiene antes.",
@@ -123,7 +136,7 @@ const scenes = {
     ]
   },
   llamada: {
-    image: "puerta",
+    image: "zona0",
     place: "Grupo sin nombre",
     title: "Cinco cultos escriben a la vez",
     caption: "Los mensajes llegan con errores de hora. Algunos fueron enviados manana.",
@@ -181,7 +194,7 @@ const scenes = {
     ]
   },
   hospital: {
-    image: "archivo",
+    image: "hospital",
     place: "Hospital / Subsuelo clinico",
     title: "Rutina Higado",
     caption: "Los ascensores no suben. Bajan al mismo piso con nombres distintos.",
@@ -209,7 +222,7 @@ const scenes = {
     ]
   },
   puerto: {
-    image: "puerta",
+    image: "puerto",
     place: "Puerto / Darsena 9",
     title: "El viento de las carabelas",
     caption: "Los contenedores golpean como campanas. Uno trae sal. Otro trae Renacimiento. Otro trae deuda.",
@@ -237,7 +250,7 @@ const scenes = {
     ]
   },
   bolsa: {
-    image: "cthon",
+    image: "bolsa",
     place: "Bolsa / Pantalla de futuros",
     title: "El precio antes del hecho",
     caption: "Una pantalla cotiza nombres propios. El tuyo abre en baja y cierra como combustible.",
@@ -295,7 +308,7 @@ const scenes = {
     ]
   },
   fork: {
-    image: "cthon",
+    image: "fork",
     place: "Sala blanca / Rama duplicada",
     title: "La copia reclama original",
     caption: "Hay dos sillas, dos vasos, dos sombras. Una sombra llego antes.",
@@ -323,7 +336,7 @@ const scenes = {
     ]
   },
   subsuelo: {
-    image: "cthon",
+    image: "subsuelo",
     place: "Subsuelo / Cthonfuego",
     title: "El hierro que no se enfria",
     caption: "Tres mil kilometros abajo, el mundo late como una caldera que aprendio contabilidad.",
@@ -351,7 +364,7 @@ const scenes = {
     ]
   },
   catedral: {
-    image: "puerta",
+    image: "catedral",
     place: "Catedral / Nave lateral",
     title: "Exceso ardiendo despacio",
     caption: "La piedra no sostiene el techo. Sostiene una demora de tres siglos.",
@@ -380,7 +393,7 @@ const scenes = {
     ]
   },
   frontera: {
-    image: "puerta",
+    image: "frontera",
     place: "Villa/Frontera / Antena comunal",
     title: "El yuyo aprende sin cabeza",
     caption: "Una red de cables cruza techos, santos, routers, ollas y paredes sin revocar.",
@@ -408,7 +421,7 @@ const scenes = {
     ]
   },
   yuyo: {
-    image: "puerta",
+    image: "yuyo",
     place: "Red baja / Nodos sin rey",
     title: "No hay centro para tomar",
     caption: "La ciudad se ve desde arriba como placa madre mojada.",
@@ -431,7 +444,7 @@ const scenes = {
     ]
   },
   piedra: {
-    image: "archivo",
+    image: "piedra",
     place: "Cantera / Roca del Caucaso copiada",
     title: "La piedra con tu nombre",
     caption: "No marca cuando moris. Marca cuando empezas a rendir.",
@@ -459,7 +472,7 @@ const scenes = {
     ]
   },
   aleph: {
-    image: "archivo",
+    image: "aleph",
     place: "Sotano / Todos los sotanos",
     title: "El punto que contiene el expediente",
     caption: "Un guiño bibliotecario: no hay infinito limpio, solo archivo mirando archivo.",
@@ -482,7 +495,7 @@ const scenes = {
     ]
   },
   northampton: {
-    image: "puerta",
+    image: "nota",
     place: "Nota al pie / Panel quemado",
     title: "El grimorio mira la pagina",
     caption: "La noche se ordena en viñetas. Cada decision deja un gutter donde el Incendio respira.",
@@ -505,7 +518,7 @@ const scenes = {
     ]
   },
   apertura: {
-    image: "puerta",
+    image: "apertura",
     place: "Puerta Prometeo / 03:33",
     title: "La Puerta se abre igual",
     caption: "La bisagra no pregunta si estas listo. Pregunta que parte tuya ya sirve.",
@@ -529,7 +542,7 @@ const scenes = {
     ]
   },
   final: {
-    image: "puerta",
+    image: "apertura",
     place: "Zona 0 / Despues",
     title: "Contabilidad de uso optimo",
     caption: "El final no clausura. Deja instrucciones.",

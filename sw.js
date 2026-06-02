@@ -1,4 +1,4 @@
-const CACHE_NAME = "puerta-prometeo-v2";
+const CACHE_NAME = "puerta-prometeo-v3";
 const ASSETS = [
   "/",
   "/index.html",
@@ -12,7 +12,19 @@ const ASSETS = [
   "/assets/numogram.svg",
   "/assets/scenes/puerta-prometeo.webp",
   "/assets/scenes/archivo-echeverria.webp",
-  "/assets/scenes/cthonfuego-datacenter.webp"
+  "/assets/scenes/cthonfuego-datacenter.webp",
+  "/assets/scenes/zona0-comunicado.webp",
+  "/assets/scenes/puerto-ritual.webp",
+  "/assets/scenes/hospital-rutina.webp",
+  "/assets/scenes/bolsa-oraculo.webp",
+  "/assets/scenes/fork-maquina.webp",
+  "/assets/scenes/subsuelo-cthonfuego.webp",
+  "/assets/scenes/catedral-derrame.webp",
+  "/assets/scenes/frontera-yuyo.webp",
+  "/assets/scenes/archivo-aleph.webp",
+  "/assets/scenes/apertura-final.webp",
+  "/assets/scenes/piedra-host.webp",
+  "/assets/scenes/nota-al-pie.webp"
 ];
 
 self.addEventListener("install", (event) => {
