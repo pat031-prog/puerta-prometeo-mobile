@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Puerta Prometeo</title>
+  <desc id="desc">Sigilo numografico con una puerta roja, hierro negro y centro encendido.</desc>
+  <rect width="512" height="512" fill="#0b0a0a"/>
+  <path d="M92 452h328V120L256 44 92 120z" fill="#171313" stroke="#f1eee4" stroke-width="12"/>
+  <path d="M151 422V155l105-48 105 48v267" fill="none" stroke="#c9362c" stroke-width="18"/>
+  <circle cx="256" cy="258" r="82" fill="#0b0a0a" stroke="#35d0ba" stroke-width="10"/>
+  <path d="M256 176c42 74 42 118 0 164-42-46-42-90 0-164z" fill="#f6c945"/>
+  <path d="M219 292c19 17 38 17 57 0" fill="none" stroke="#c9362c" stroke-width="12" stroke-linecap="round"/>
+  <g fill="#f1eee4" font-family="monospace" font-size="34" text-anchor="middle">
+    <text x="256" y="93">9</text>
+    <text x="256" y="476">0</text>
+    <text x="104" y="272">3</text>
+    <text x="408" y="272">6</text>
+    <text x="158" y="402">4</text>
+    <text x="354" y="402">5</text>
+  </g>
+</svg>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#c9362c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Prometeo 0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Tablero ritual mobile-first para Puerta Prometeo: La Noche del 0.">
+    <title>Puerta Prometeo · La Noche del 0</title>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <img class="brand-sigil" src="/assets/icon.svg" alt="">
+          <div>
+            <p class="kicker">PUERTA PROMETEO</p>
+            <h1>La Noche del 0</h1>
+          </div>
+        </div>
+        <div class="status-strip" aria-label="Estado de partida">
+          <button class="status-pill" id="actControl" type="button">
+            <span>Acto</span>
+            <strong id="actValue">I</strong>
+          </button>
+          <button class="status-pill danger" id="zeroControl" type="button">
+            <span>Zona 0</span>
+            <strong id="zeroValue">0</strong>
+          </button>
+          <button class="status-pill heat" id="fireControl" type="button">
+            <span>Fuego</span>
+            <strong id="fireValue">0</strong>
+          </button>
+        </div>
+      </header>
+
+      <main class="views" id="views">
+        <section class="view active" id="view-ritual" aria-labelledby="tab-ritual">
+          <div class="story-stage">
+            <figure class="scene-frame">
+              <img id="sceneImage" src="/assets/scenes/puerta-prometeo.webp" alt="Puerta Prometeo">
+              <figcaption id="sceneCaption">La Puerta espera una decision.</figcaption>
+            </figure>
+            <article class="scene-panel">
+              <p class="kicker" id="sceneMeta">00:09 / Pantalla bloqueada</p>
+              <h2 id="sceneTitle">El paquete se ejecuta</h2>
+              <p id="sceneBody">La noche todavia esta cargando.</p>
+              <div class="dialogue-list" id="sceneDialogue"></div>
+              <div class="choice-list" id="choiceList"></div>
+              <div class="flag-strip" id="storyFlags" aria-label="Marcas de historia"></div>
+            </article>
+          </div>
+
+          <div class="ritual-stage">
+            <img class="numogram" src="/assets/numogram.svg" alt="Numograma de la carne">
+            <div class="roll-panel">
+              <p class="panel-label">Corriente activa</p>
+              <div class="segmented" role="group" aria-label="Corrientes">
+                <button class="segment active" type="button" data-current="9->0">9->0</button>
+                <button class="segment" type="button" data-current="6->3">6->3</button>
+                <button class="segment" type="button" data-current="4->5">4->5</button>
+              </div>
+              <button class="primary-action" id="rollButton" type="button">
+                <span class="action-mark">d10</span>
+                Forzar corriente
+              </button>
+              <div class="roll-result" id="rollResult" aria-live="polite">
+                <span class="ghost-number">∴</span>
+                <p>La ignicion espera borde.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="act-band" id="actBand"></div>
+          <div class="timeline-log" id="timelineLog" aria-live="polite"></div>
+        </section>
+
+        <section class="view" id="view-cults" aria-labelledby="tab-cults">
+          <div class="section-heading">
+            <p class="kicker">CULTOS RIVALES</p>
+            <h2>Células en combustión</h2>
+          </div>
+          <div class="cult-list" id="cultList"></div>
+        </section>
+
+        <section class="view" id="view-map" aria-labelledby="tab-map">
+          <div class="section-heading">
+            <p class="kicker">CIUDAD RIOPLATENSE</p>
+            <h2>Mapa de convergencia</h2>
+          </div>
+          <div class="map-grid" id="mapGrid"></div>
+        </section>
+
+        <section class="view" id="view-cards" aria-labelledby="tab-cards">
+          <div class="section-heading">
+            <p class="kicker">DOSSIER QUEMADO</p>
+            <h2>Cartas de noche</h2>
+          </div>
+          <div class="draw-controls">
+            <button class="draw-button" type="button" data-deck="archivo">Archivo</button>
+            <button class="draw-button" type="button" data-deck="puerta">Puerta</button>
+            <button class="draw-button" type="button" data-deck="incendio">Incendio</button>
+          </div>
+          <article class="drawn-card" id="drawnCard">
+            <p class="card-kind">∴ SIN CARTA</p>
+            <h3>El expediente todavía no eligió página.</h3>
+            <p>Robá una carta cuando la mesa necesite un presagio, una deuda o una intervención del 0.</p>
+          </article>
+        </section>
+
+        <section class="view" id="view-rules" aria-labelledby="tab-rules">
+          <div class="section-heading">
+            <p class="kicker">MANUAL INTERVENIDO</p>
+            <h2>Reglas de la apertura</h2>
+          </div>
+          <div class="rules-flow">
+            <article class="rule-card">
+              <span class="rule-index">I</span>
+              <h3>Archivo</h3>
+              <p>Llega un comunicado. Cada culto declara qué quiere salvar y qué está dispuesto a gastar.</p>
+            </article>
+            <article class="rule-card">
+              <span class="rule-index">II</span>
+              <h3>Convergencia</h3>
+              <p>Los cultos ocupan lugares. Cada zona tomada da recurso, testigo o marca sobre la Puerta.</p>
+            </article>
+            <article class="rule-card">
+              <span class="rule-index">III</span>
+              <h3>Combustión</h3>
+              <p>Las Corrientes se fuerzan con d10. El 0 natural fija deuda, fecha o pérdida irreversible.</p>
+            </article>
+            <article class="rule-card">
+              <span class="rule-index">IV</span>
+              <h3>Apertura</h3>
+              <p>La Puerta se abre. Se compara influencia ritual, Fuego acumulado y humanidad restante.</p>
+            </article>
+          </div>
+          <div class="ending-panel" id="endingPanel"></div>
+          <button class="reset-button" id="resetButton" type="button">Reiniciar expediente</button>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Navegación principal">
+        <button class="nav-button active" id="tab-ritual" type="button" data-view="ritual">
+          <span class="nav-icon">∴</span>
+          RPG
+        </button>
+        <button class="nav-button" id="tab-cults" type="button" data-view="cults">
+          <span class="nav-icon">≡</span>
+          Cultos
+        </button>
+        <button class="nav-button" id="tab-map" type="button" data-view="map">
+          <span class="nav-icon">□</span>
+          Mapa
+        </button>
+        <button class="nav-button" id="tab-cards" type="button" data-view="cards">
+          <span class="nav-icon">◇</span>
+          Cartas
+        </button>
+        <button class="nav-button" id="tab-rules" type="button" data-view="rules">
+          <span class="nav-icon">0</span>
+          Reglas
+        </button>
+      </nav>
+    </div>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

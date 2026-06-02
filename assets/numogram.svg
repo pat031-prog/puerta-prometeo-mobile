@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Numograma de la carne</title>
+  <desc id="desc">Mapa ritual de pares suma nueve y corrientes del Incendio.</desc>
+  <rect width="900" height="560" fill="#0b0a0a"/>
+  <g fill="none" stroke="#2d2925" stroke-width="2">
+    <path d="M90 470C200 110 680 110 790 470"/>
+    <path d="M110 380C290 210 610 210 790 380"/>
+    <path d="M150 300h600"/>
+    <path d="M220 180h460"/>
+  </g>
+  <g stroke="#f1eee4" stroke-width="3">
+    <line x1="146" y1="430" x2="754" y2="430"/>
+    <line x1="275" y1="245" x2="625" y2="245"/>
+    <line x1="350" y1="145" x2="550" y2="145"/>
+  </g>
+  <g font-family="monospace" font-size="62" font-weight="700" text-anchor="middle">
+    <circle cx="146" cy="430" r="54" fill="#171313" stroke="#c9362c" stroke-width="6"/>
+    <text x="146" y="451" fill="#f1eee4">9</text>
+    <circle cx="754" cy="430" r="54" fill="#171313" stroke="#c9362c" stroke-width="6"/>
+    <text x="754" y="451" fill="#f1eee4">0</text>
+    <circle cx="275" cy="245" r="48" fill="#171313" stroke="#35d0ba" stroke-width="6"/>
+    <text x="275" y="266" fill="#f1eee4">6</text>
+    <circle cx="625" cy="245" r="48" fill="#171313" stroke="#35d0ba" stroke-width="6"/>
+    <text x="625" y="266" fill="#f1eee4">3</text>
+    <circle cx="350" cy="145" r="42" fill="#171313" stroke="#f6c945" stroke-width="6"/>
+    <text x="350" y="166" fill="#f1eee4">4</text>
+    <circle cx="550" cy="145" r="42" fill="#171313" stroke="#f6c945" stroke-width="6"/>
+    <text x="550" y="166" fill="#f1eee4">5</text>
+  </g>
+  <g fill="#f1eee4" font-family="monospace" font-size="20" text-anchor="middle">
+    <text x="450" y="466">Rutina Higado 9 -> 0</text>
+    <text x="450" y="288">Captura del Motor 6 -> 3</text>
+    <text x="450" y="130">Derrame / Fork 4 -> 5</text>
+  </g>
+</svg>
